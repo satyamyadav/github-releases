@@ -1,9 +1,6 @@
-- name: Semantic Releaser
-  uses: brpaz/action-semantic-release@v1
-  with:
-    # Specifies a list of extra plugins to install
-    install_plugins: # optional
-    # Run semantic release in dry-run mode
-    dry_run: # optional, default is false
-    # The branch to release from
-    branch: # optional, default is master
+steps:
+    uses: brpaz/action-semantic-release@v1
+    with:
+        dry_run: "false"
+        install_plugins: "semantic-release-docker semantic-release-gcr"
+        branch: master
