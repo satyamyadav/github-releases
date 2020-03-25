@@ -1,5 +1,5 @@
 {
-  "name": "github-releases",
+  "name": "@satyamyadav/github-releases",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
