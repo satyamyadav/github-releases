@@ -21,3 +21,4 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NPM_CONFIG_REGISTRY: ${{ secrets.NPM_CONFIG_REGISTRY }}
