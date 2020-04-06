@@ -10,16 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: npm install and build
-        run: npm
+        run: npm install
 
       - name: lint
         run: npm run lint
 
       - name: test
         run: npm run test
-
-      - name: bundlesize
-        run: npm run bundlesize
 
   release:
     needs: build_test_lint 
@@ -30,7 +27,7 @@ jobs:
       
       - name: Check for release commit
         id: 'is_release_commit'
-        uses: trivago/module/actions/check-release-commit@master
+        uses: satyamyadav/github-releases/actions/check-release-commit@master
       
       - uses: actions/setup-node@v1
         if: steps.is_release_commit.outputs.result == 1
