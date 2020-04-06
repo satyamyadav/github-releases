@@ -30,16 +30,16 @@ jobs:
         uses: satyamyadav/github-releases/actions/check-release-commit@master
       
       - uses: actions/setup-node@v1
-        if: steps.is_release_commit.outputs.result == 1
+        # if: steps.is_release_commit.outputs.result == 1
         with:
           node-version: '8.x'
       
       - name: npm install and build
-        if: steps.is_release_commit.outputs.result == 1
-        run: npm
+        # if: steps.is_release_commit.outputs.result == 1
+        run: npm run buid
         
       - name: setup git
-        if: steps.is_release_commit.outputs.result == 1
+        # if: steps.is_release_commit.outputs.result == 1
         run: git checkout -b preparing-module-for-npm-publish && git config --global user.email "bot@m.com" && git config --global user.name "module-bot"
 
       # - name: add npm token
