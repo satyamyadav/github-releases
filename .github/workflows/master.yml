@@ -8,15 +8,28 @@ jobs:
   build_test_lint:
     name: build and test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
     steps:
-      - name: npm install and build
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install and build
         run: npm install
 
-      # - name: lint
-      #   run: npm run lint
+      - name: lint
+        run: npm run lint
 
       - name: test
         run: npm run test
+
+      # - name: bundlesize
+      #   run: yarn run bundlesize
 
   release:
     needs: build_test_lint 
