@@ -1,7 +1,7 @@
 # action.yml
 name: Check release commit
 
-description: 'check melody release commit'
+description: 'check release commit'
 
 outputs:
   result:
