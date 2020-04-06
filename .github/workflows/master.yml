@@ -1,0 +1,72 @@
+name: master branch
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build_test_lint:
+    name: build and test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [6.x, 8.x, 10.x, 12.x]
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: npm install and build
+        run: npm
+
+      - name: lint
+        run: npm run lint
+
+      - name: test
+        run: npm run test
+
+      - name: bundlesize
+        run: npm run bundlesize
+
+  release:
+    needs: build_test_lint 
+    name: Publish Package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      
+      - name: Check for release commit
+        id: 'is_release_commit'
+        uses: trivago/module/actions/check-release-commit@master
+      
+      - uses: actions/setup-node@v1
+        if: steps.is_release_commit.outputs.result == 1
+        with:
+          node-version: '8.x'
+      
+      - name: npm install and build
+        if: steps.is_release_commit.outputs.result == 1
+        run: npm
+        
+      - name: setup git
+        if: steps.is_release_commit.outputs.result == 1
+        run: git checkout -b preparing-module-for-npm-publish && git config --global user.email "bot@m.com" && git config --global user.name "module-bot"
+
+      # - name: add npm token
+      #   if: steps.is_release_commit.outputs.result == 1
+      #   run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > .npmrc
+      
+      - name: bump module version
+        if: steps.is_release_commit.outputs.result == 1
+        run: npm version $(git log -1 --pretty=format:%s) --no-push  --yes --force-publish=*
+        
+      - name: push module tags to github
+        if: steps.is_release_commit.outputs.result == 1
+        run: git push https://${{ secrets.GH_TOKEN }}@github.com/satyamyadav/github-releases.git HEAD:master --follow-tags
+      
+      # - name: publish module to npmjs.org
+      #   if: steps.is_release_commit.outputs.result == 1
+      #   run: npm lerna publish from-git --force-publish=* --yes --registry https://registry.npmjs.org
