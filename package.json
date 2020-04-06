@@ -1,6 +1,6 @@
 {
   "name": "@stile/github-releases",
-  "version": "1.11.10",
+  "version": "1.11.11",
   "description": "",
   "main": "index.js",
   "scripts": {
