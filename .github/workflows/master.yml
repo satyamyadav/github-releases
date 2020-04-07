@@ -65,7 +65,7 @@ jobs:
         
       - name: add release notes
         if: steps.is_release_commit.outputs.result == 1
-        run: git notes add $(git log -1 --pretty=format:%s) -m "test note"     
+        run: git notes add v$(git log -1 --pretty=format:%s) -m "test note"     
 
       - name: push module tags to github
         if: steps.is_release_commit.outputs.result == 1
