@@ -16,3 +16,132 @@ v2.0.7-3  (2020-04-07)
 
 -------------------
 
+v2.0.7-3  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script 
+
+-------------------
+
+v2.0.7-3  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script 
+-------------------
+
+v2.0.7-3  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script 
+-------------------
+
+
+-------------------
+ v2.0.7-3  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+-------------------
+ v2.0.7-3  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+
+
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
+
+-------------------
+ **v2.0.7-3**  (2020-04-07) 
+
+* 3162388 2.0.7-3
+* 4ecfca4 feat: update change log script
