@@ -63,9 +63,6 @@ jobs:
         if: steps.is_release_commit.outputs.result == 1
         run: npm version $(git log -1 --pretty=format:%s) --no-push  --yes --force-publish=*
         
-      - name: push release notes
-        if: steps.is_release_commit.outputs.result == 1
-        run: git push orgin /ref/notes/v$(git log -1 --pretty=format:%s)
 
       - name: push module tags to github
         if: steps.is_release_commit.outputs.result == 1
