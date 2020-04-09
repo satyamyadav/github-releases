@@ -39,7 +39,7 @@ You can get a new site up and running on your local dev environment in 5 minutes
 
 ## ❗ Code of Conduct
 
- We expect everyone participating in the community to abide by our [**Code of Conduct**](). Please read it. Please follow it. We work hard to build each other up and create amazing things together. 💪💜
+ We expect everyone participating in the community to abide by our [**Code of Conduct**](https://github.com/satyamyadav/github-releases/blob/master/CODE_OF_CONDUCT.md). Please read it. Please follow it. We work hard to build each other up and create amazing things together. 💪💜
 
 ## 🤝 How to Contribute
 
