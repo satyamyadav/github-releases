@@ -165,3 +165,23 @@ v2.0.7-3  (2020-04-07)
 * a46e1dc v2.0.7-10
 * 0724707 v2.0.7-9
 * f858e37 v2.0.7-6
+
+-------------------
+ **v2.0.7-13**  (2020-04-30) 
+
+* 610dc0d v2.0.7-13
+* 5c7a1ec v2.0.7-12
+* 08ad5ea action to publish
+* df6b22f v2.0.7-11
+* 2e08f32 chore: adds github issue and pull request templates
+* b9e15b7 chore: adds pull request action
+* 2342a2d Create pull_request_template.md
+* b6bfb5f Update README.md
+* 250d9c1 Update README.md
+* 823e7c5 Update CODE_OF_CONDUCT.md
+* 68cfd0c v2.0.7-16
+* 60dc788 v2.0.7-15
+* 9b0b9c8 v2.0.7-14
+* b842547 v2.0.7-13
+* 7f3c44d v2.0.7-12
+* 15450f2 v2.0.7-11
