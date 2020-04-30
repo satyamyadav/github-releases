@@ -71,3 +71,8 @@ jobs:
       # - name: publish module to npmjs.org
       #   if: steps.is_release_commit.outputs.result == 1
       #   run: npm lerna publish from-git --force-publish=* --yes --registry https://registry.npmjs.org
+
+      - name: Publish to npmjs
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
