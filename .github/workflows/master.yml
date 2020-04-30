@@ -72,8 +72,8 @@ jobs:
       #   if: steps.is_release_commit.outputs.result == 1
       #   run: npm lerna publish from-git --force-publish=* --yes --registry https://registry.npmjs.org
 
+      - run: cp .npmrc.stub .npmrc
       - name: Publish to npmjs
-        run: cp .npmrc.stub .npmrc
         run: npm publish --access public
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
