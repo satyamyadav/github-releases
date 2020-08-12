@@ -38,12 +38,12 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       
-      # - name: Check for release commit
-      #   id: 'is_release_commit'
-      #   uses: /satyam/github-releases/actions/check-release-commit@master
+      - name: Check for release commit
+        id: 'is_release_commit'
+        uses: /satyam/github-releases/actions/check-release-commit@master
       
       - uses: actions/setup-node@v1
-        # if: steps.is_release_commit.outputs.result == 1
+        if: steps.is_release_commit.outputs.result == 1
         with:
           node-version: '8.x'
       
@@ -60,7 +60,7 @@ jobs:
       #   run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > .npmrc
       
       - name: bump module version
-        # if: steps.is_release_commit.outputs.result == 1
+        if: steps.is_release_commit.outputs.result == 1
         run: npm version $(git log -1 --pretty=format:%s) --no-push  --yes --force-publish=*
         
 
