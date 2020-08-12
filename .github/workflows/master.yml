@@ -43,13 +43,13 @@ jobs:
         uses: /satyamyadav/github-releases/actions/check-release-commit@master
       
       - uses: actions/setup-node@v1
-        if: steps.is_release_commit.outputs.result == 1
+        # if: steps.is_release_commit.outputs.result == 1
         with:
           node-version: '8.x'
-      
+          
       - name: npm install and build
         # if: steps.is_release_commit.outputs.result == 1
-        run: npm run build
+        run: echo "${{ steps.is_release_commit.outputs.result }}"
         
       - name: setup git
         # if: steps.is_release_commit.outputs.result == 1
