@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo no test specified",
+    "test": "jest",
     "build": "mkdir -p dist && cp index.js dist",
     "prepublishOnly": "npm run build",
     "lint": "echo lint script",
@@ -12,5 +12,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
 }
