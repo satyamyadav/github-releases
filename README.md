@@ -13,6 +13,8 @@
   Short description.
 </p>
 
+[![Coverage Status](https://coveralls.io/repos/github/satyamyadav/github-releases/badge.svg?branch=master)](https://coveralls.io/github/satyamyadav/github-releases?branch=master)
+
 Feature Descriptions 
 
 - **Feature one.** Get all.
