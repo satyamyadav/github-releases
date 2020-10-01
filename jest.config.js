@@ -3,7 +3,7 @@ module.exports = {
   testPathIgnorePatterns: ['/public/', 'node_modules'],
   collectCoverage: true,
   "collectCoverageFrom": [
-    "*.{js,jsx}",
+    "src/*.{js,jsx}",
     "!**/node_modules/**"
   ]
 };
