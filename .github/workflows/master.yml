@@ -28,6 +28,11 @@ jobs:
       - name: test
         run: npm test -- --coverage
 
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+        github-token: ${{ secrets.GH_TOKEN }}
+
       # - name: bundlesize
       #   run: yarn run bundlesize
 
