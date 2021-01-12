@@ -24,7 +24,7 @@ jobs:
       
       - name: notify release
         uses: /satyamyadav/github-releases/actions/notify-release@master
-        with:
+        env:
           GCHAT_PATH: ${{ secrets.GCHAT_PATH }}
 
       # - name: lint
