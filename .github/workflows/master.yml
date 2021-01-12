@@ -21,6 +21,9 @@ jobs:
 
       - name: install
         run: npm install
+      
+      - name: notify release
+        uses: /satyamyadav/github-releases/actions/notify-release@master
 
       # - name: lint
       #   run: npm run lint
