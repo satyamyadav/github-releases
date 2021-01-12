@@ -86,9 +86,10 @@ jobs:
   notify:
       needs: release
       name: notify release
-      uses: /satyamyadav/github-releases/actions/notify-release@master
-      env:
-        GCHAT_PATH: ${{ secrets.GCHAT_PATH }}
+      steps:
+        - uses: /satyamyadav/github-releases/actions/notify-release@master
+          env:
+            GCHAT_PATH: ${{ secrets.GCHAT_PATH }}
         
 
   
