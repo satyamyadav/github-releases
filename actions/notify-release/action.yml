@@ -3,10 +3,6 @@ name: notify release
 
 description: 'notify release'
 
-outputs:
-  result:
-    description: 1 or 0
-
 runs:
   using: 'node12'
   main: 'main.js'
