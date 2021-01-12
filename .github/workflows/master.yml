@@ -24,6 +24,8 @@ jobs:
       
       - name: notify release
         uses: /satyamyadav/github-releases/actions/notify-release@master
+        with:
+          GCHAT_PATH: ${{ secrets.GCHAT_PATH }}
 
       # - name: lint
       #   run: npm run lint
