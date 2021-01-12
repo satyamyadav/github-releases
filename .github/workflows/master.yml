@@ -22,11 +22,6 @@ jobs:
       - name: install
         run: npm install
       
-      - name: notify release
-        uses: /satyamyadav/github-releases/actions/notify-release@master
-        env:
-          GCHAT_PATH: ${{ secrets.GCHAT_PATH }}
-
       # - name: lint
       #   run: npm run lint
 
@@ -87,3 +82,13 @@ jobs:
         run: npm publish --access public
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  notify:
+      needs: release
+      name: notify release
+      uses: /satyamyadav/github-releases/actions/notify-release@master
+      env:
+        GCHAT_PATH: ${{ secrets.GCHAT_PATH }}
+        
+
+  
