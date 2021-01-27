@@ -3,7 +3,7 @@ on:
   # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#issues
   # https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads#issues
   issues:
-    types: [opened, edited, milestoned]
+    types: [opened]
 
 jobs:
   hello:
@@ -11,6 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print hello
-        run: echo "hello ${{ github.event.issue.html_url }}"
-        run: echo "hello ${{ github.event.issue.title }}"
-        run: echo "hello ${{ github.event.issue.description }}"
+        run: echo "hello ${{ github.event.issue.html_url }}" && echo "hello ${{ github.event.issue.title }}" && echo "hello ${{ github.event.issue.description }}"
