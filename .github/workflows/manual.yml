@@ -1,6 +1,7 @@
 name: manual trigger
 on:
-  workflow_dispatch:
+  issues:
+    types: [opened, edited, milestoned]
     inputs:
       foo: 'bar'
 jobs:
