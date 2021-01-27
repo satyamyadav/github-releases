@@ -5,9 +5,8 @@ on:
       foo: 'bar'
 jobs:
   hello:
-    name: greeting
+    name: hello
     runs-on: ubuntu-latest
     steps:
-      
-      - name: hello
-        run: "echo hello ${{ github.event.inputs.foo }}"
+      - name: print hello
+        run: echo "hello ${{ github.event.inputs.foo }}"
