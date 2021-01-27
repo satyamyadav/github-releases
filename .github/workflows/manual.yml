@@ -1,14 +1,14 @@
-name: issue trigger
-on:
-  # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#issues
-  # https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads#issues
-  issues:
-    types: [opened]
+# name: issue trigger
+# on:
+#   # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#issues
+#   # https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads#issues
+#   issues:
+#     types: [opened]
 
-jobs:
-  hello:
-    name: hello
-    runs-on: ubuntu-latest
-    steps:
-      - name: print hello
-        run: echo "${{ github.event.issue.html_url }}" && echo "title - ${{ github.event.issue.title }}" && echo "des - ${{ github.event.issue.body }}"
+# jobs:
+#   hello:
+#     name: hello
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: print hello
+#         run: echo "${{ github.event.issue.html_url }}" && echo "title - ${{ github.event.issue.title }}" && echo "des - ${{ github.event.issue.body }}"
