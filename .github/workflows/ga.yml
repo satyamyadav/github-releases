@@ -1,0 +1,25 @@
+name: "Create tasks"
+
+on:
+  workflow_dispatch:
+    inputs:
+      foo: 'bar'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Create jira issue
+    steps:
+    - name: Create
+      id: create
+      run: echo "Issue ${{ payload }} was created"
+      # with:
+      #   project: DS
+      #   issuetype: Task
+      #   summary: |
+      #     Test task for ${{ github.repository }}
+      #   description: |
+      #     Task description
+
+    - name: Log created issue
+      run: echo "Issue ${{ steps.create.outputs.issue }} was created"    
