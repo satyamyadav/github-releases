@@ -1,11 +1,9 @@
 name: manual trigger
 on:
   issues:
-    types: [opened, edited, milestoned]
-    inputs:
-      foo: 'bar'
+    types: [opened]
 jobs:
-  hello:
+  say_hello:
     name: hello
     runs-on: ubuntu-latest
     steps:
