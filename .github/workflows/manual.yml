@@ -1,8 +1,8 @@
-name: manual trigger
+name: issue trigger
 on:
   issues:
     types: [opened, edited, milestoned]
-    
+
 jobs:
   hello:
     name: hello
