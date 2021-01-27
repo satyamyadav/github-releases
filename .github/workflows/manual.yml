@@ -11,4 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print hello
-        run: echo "hello ${{ github.event.issue.url }}"
+        run: echo "hello ${{ github.event.issue.html_url }}"
+        run: echo "hello ${{ github.event.issue.title }}"
+        run: echo "hello ${{ github.event.issue.description }}"
