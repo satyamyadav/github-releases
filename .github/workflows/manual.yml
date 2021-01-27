@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print hello
-        run: echo "${{ github.event.issue.html_url }}" && echo "title - ${{ github.event.issue.title }}" && echo "des - ${{ github.event.issue.description }} && echo "des - ${{ JSON.stringify(github.event.issue) }}"
+        run: echo "${{ github.event.issue.html_url }}" && echo "title - ${{ github.event.issue.title }}" && echo "des - ${{ github.event.issue.body }}"
