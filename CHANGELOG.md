@@ -354,3 +354,10 @@ v2.0.7-3  (2020-04-07)
  **v3.2.0-1**  (2021-12-21) 
 
 * 78c2270 chore: adds manual release trigger
+
+-------------------
+ **v3.2.0-2**  (2021-12-21) 
+
+* 649415c chore: adds manual release trigger
+* 0441d57 Released v3.2.0-1
+* 78c2270 chore: adds manual release trigger
