@@ -339,3 +339,8 @@ v2.0.7-3  (2020-04-07)
 * 841c7f7 Released v1.1.0-6
 * c9f2cab v1.1.0-6
 * 996ad1b chore: updates github actions for master
+
+-------------------
+ **v3.1.0-0**  (2021-12-21) 
+
+* aaca7d5 3.0.0
