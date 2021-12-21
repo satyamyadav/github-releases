@@ -316,3 +316,14 @@ v2.0.7-3  (2020-04-07)
 * 4546b40 2.0.8
 * a941a66 v2.0.8
 * 654a90c feat: update change log script
+
+-------------------
+ **v2.0.0**  (2021-12-21) 
+
+* 13b8c22 chore: adds manual release trigger
+* 88609f9 chore: adds manual release trigger
+* 8d74cde chore: adds manual release trigger
+* a44e1c0 v1.1.0-7
+* 841c7f7 Released v1.1.0-6
+* c9f2cab v1.1.0-6
+* 996ad1b chore: updates github actions for master
