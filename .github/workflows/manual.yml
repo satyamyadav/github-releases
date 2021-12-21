@@ -32,7 +32,7 @@ jobs:
       
       - name: bump module version
         
-        run: npm version $(git log -1 --pretty=format:%s) -m "Released %s"
+        run: npm version ${{ github.event.inputs.release_type }} -m "Released %s"
 
       # - name: gnerate .npmrc
       #   
@@ -58,7 +58,7 @@ jobs:
           git reset HEAD~1
           git add package.json
           git add CHANGELOG.md
-          git commit -m "Released $(git log -1 --pretty=format:%s)"
+          git commit -m "Released ${{ github.event.inputs.release_type }}"
 
       - name: push version to github
         
