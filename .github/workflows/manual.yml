@@ -1,14 +1,76 @@
-# name: issue trigger
-# on:
-#   # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#issues
-#   # https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads#issues
-#   issues:
-#     types: [opened]
+name: "Test build release"
 
-# jobs:
-#   hello:
-#     name: hello
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: print hello
-#         run: echo "${{ github.event.issue.html_url }}" && echo "title - ${{ github.event.issue.title }}" && echo "des - ${{ github.event.issue.body }}"
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: 'Release type to be used in npm version command'
+        required: true
+        default: 'prerelease'
+
+jobs:
+  release:
+    # uncomment next line as soon as visual tesing starts working
+    # needs: visual_test 
+    name: Release tag
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      
+      - uses: actions/setup-node@v1
+        
+        with:
+          node-version: '10.x'
+      
+      # - name: npm install
+      #   
+      #   run: npm install
+        
+      - name: setup git
+        
+        run: git checkout -b preparing-module-for-npm-publish && git config --global user.email "bot@m.com" && git config --global user.name "module-bot"
+      
+      - name: bump module version
+        
+        run: npm version $(git log -1 --pretty=format:%s) -m "Released %s"
+
+      # - name: gnerate .npmrc
+      #   
+      #   run: cp .npmrc.stub .npmrc
+
+      # - name: Publish to npmjs
+      #   
+      #   run: npm publish --access public
+      #   env:
+      #     NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      # - name: remove .npmrc
+      #   
+      #   run: rm -rf .npmrc
+        
+      - name: push module tags to github
+        
+        run: git push https://${{ secrets.GH_TOKEN }}@github.com/$GITHUB_REPOSITORY.git --follow-tags
+
+      - name: remove builds from commit
+        
+        run: |
+          git reset HEAD~1
+          git add package.json
+          git add CHANGELOG.md
+          git commit -m "Released $(git log -1 --pretty=format:%s)"
+
+      - name: push version to github
+        
+        run: git push https://${{ secrets.GH_TOKEN }}@github.com/$GITHUB_REPOSITORY.git HEAD:master 
+    
+      # - name: deploy storybook
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      #   
+      #   run: npm run deploy-storybook -- --ci
+      
+      # - name: notify release
+      #   uses: /satyamyadav/github-releases/actions/notify-release@master
+      #   env:
+      #     GCHAT_PATH: ${{ secrets.GCHAT_PATH }}
