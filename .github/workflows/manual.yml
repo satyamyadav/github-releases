@@ -50,7 +50,7 @@ jobs:
         
       - name: push module tags to github
         
-        run: git push https://${{ secrets.GH_TOKEN }}@github.com/$GITHUB_REPOSITORY.git --follow-tags
+        run: git push https://${{ secrets.GH_TOKEN }}@github.com/$GITHUB_REPOSITORY.git v$(node -p -e "require('./package.json').version")
 
       - name: remove builds from commit
         
@@ -58,7 +58,7 @@ jobs:
           git reset HEAD~1
           git add package.json
           git add CHANGELOG.md
-          git commit -m "Released ${{ github.event.inputs.release_type }}"
+          git commit -m "Released v$(node -p -e "require('./package.json').version")"
 
       - name: push version to github
         
