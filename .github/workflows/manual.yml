@@ -62,7 +62,7 @@ jobs:
 
       - name: push version to github
         
-        run: git push https://${{ secrets.GH_TOKEN }}@github.com/$GITHUB_REPOSITORY.git HEAD:master 
+        run: git push https://${{ secrets.GH_TOKEN }}@github.com/$GITHUB_REPOSITORY.git HEAD:$GITHUB_REF_NAME 
     
       # - name: deploy storybook
       #   env:
