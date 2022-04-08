@@ -1,3 +1,3 @@
 #!/bin/env node
 
-require('./package.json').version
+console.log(`v${require('./package.json').version}`)
