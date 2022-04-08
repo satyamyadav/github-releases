@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
+      - name: Foo
+        run: echo $(node ./getVersion.js)
       
       - name: Check for release commit
         id: 'is_release_commit'
