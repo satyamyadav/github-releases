@@ -20,10 +20,13 @@ jobs:
         run: npm run lint
 
       - name: test
-        uses: ziishaned/jest-reporter-action@v0.0.1
+        uses: mattallty/jest-github-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-command: "npm test"
+          # this is just an example, this could be any command that will trigger jest
+          test-command: "yarn test"
+
 
       - name: build
         run: npm run build
